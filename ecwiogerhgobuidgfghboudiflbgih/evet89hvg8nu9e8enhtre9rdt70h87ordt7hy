@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" type="image/png">
+<title>Video List</title>
+<meta name="description" content="Wrapper: Online's Video List">
+<link rel="stylesheet" type="text/css" href="/pages/css/oldglobal-wrapper-reborn.css">
+</head>
+<body>
+<header>
+<div>
+<h1 style="margin:0"><img id="logo" src="logo.png" alt="Wrapper: Online"/></h1>
+<div id="headbuttons">
+<a class="button_blue" onclick="document.getElementById('file').click()">Upload a Movie</a>
+<div id="char_dropdown" class="button_purple">
+Select a Theme
+<menu>
+<h2>Comedy World</h2>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/videomaker/full/?theme=custom&style=wrapper-online-reborn-version-3.0.0">Make a Video</a>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/charactercreator/family?style=wrapper-online-reborn-version-3.0.0">Create &amp; Browse Characters</a>
+<hr>
+<h2>Anime</h2>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/videomaker/full/?theme=anime&style=wrapper-online-reborn-version-3.0.0">Make a Video</a>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/charactercreator/anime?style=wrapper-online-reborn-version-3.0.0">Create &amp; Browse Characters</a>
+<hr>
+<h2>Peepz</h2>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/videomaker/full/?theme=action&style=wrapper-online-reborn-version-3.0.0">Make a Video</a>
+<a target="_blank" href="https://action-ouranimate.herokuapp.com/charactercreator/cc2?style=wrapper-online-reborn-version-3.0.0&amp;type=default">Create &amp; Browse Characters</a>
+</menu>
+</div>
+</div>
+</header>
+<main>
+<table>
+<thead>
+<tr>
+<td></td>
+<td>Video Title</td>
+<td>Last Modified</td>
+<td></td>
+</tr>
+</thead>
+<tbody></tbody>
+<tfoot>
+<tr>
+<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+</tr>
+</tfoot>
+</table>
+</main>
+<footer>
+<a class="button_gray" href="https://discord.gg/HevKtvvN7D">Discord Server</a>
+<a class="button_gray" href="https://discord.gg/b7YSRkg">Wrapper Hub</a>
+</footer>
+<form enctype="multipart/form-data" action="/upload_movie" method="post">
+<input id="file" type="file" onchange="this.form.submit()" name="import"/>
+</form>
+</body>
+<script src="https://action-ouranimate.herokuapp.com/js/myvideos/list.js"></script>
+</html>
